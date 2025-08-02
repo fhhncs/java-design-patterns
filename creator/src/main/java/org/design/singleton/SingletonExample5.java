@@ -20,7 +20,7 @@ package org.design.singleton;
 public class SingletonExample5 {
     private SingletonExample5() {}
     private static volatile SingletonExample5 instance = null;//禁止指令重排
-    public static synchronized SingletonExample5 getInstance(){
+    public static SingletonExample5 getInstance(){
         if(instance==null){
             synchronized (SingletonExample5.class){
                 if(instance==null){
